@@ -1,7 +1,16 @@
+// my secrets shhhhh
 const SECRETS = require('./secrets');
+
+// analog => digital
 const mcpadc = require('mcp-spi-adc');
+
+// server stuffoo
 const https = require('https');
 const sampleRate = { speedHz: 2000 };
+
+// rotary encoder
+const rotaryEncoder = require('onoff-rotary');
+const myEncoder = rotaryEncoder(2,3);
 
 // MCP Analog => Serial
 let device = {};
@@ -87,6 +96,16 @@ function sendIt(){
     request.write(postData,);
     request.end();
 }
+
+// rotary encoder 
+myEncoder.on('rotation', direction => {
+    if(direction > 0) {
+        console.log('encoder rotated left');
+       } else {
+           console.log('encoder rotated right');
+       }
+});
+
 // check sensor x seconds
 setInterval(checkSensors,2000);
 setInterval(sendIt, 5000);
