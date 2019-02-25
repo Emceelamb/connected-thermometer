@@ -143,6 +143,5 @@ myEncoder.on('rotation', direction => {
 
 // check sensor x seconds
 setInterval(checkSensors,1000);
-//setInterval(sendIt, 2000);
 //setInterval(checkSensors,1000*15*60);
 //setInterval(sendIt, 1000 * 60 * 60);
