@@ -11,20 +11,18 @@ DELETE /data/:id delete one record
 
 Create:
 
-$ curl -X POST -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678 -d data="hello, world" http://serverAddress/data
+`$ curl -X POST -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678 -d data="hello, world" http://serverAddress/data`
 
-$ curl -X POST -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678 \
--d data='{"temperature": 70.9,"humidity": 22.5}' \
-http://serverAddress/data
+`$ curl -X POST -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678  -d data='{"temperature": 70.9,"humidity": 22.5}' http://serverAddress/data`
 
 Read all records:
 
-$ curl -X GET -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678 http://serverAddress/data
+`$ curl -X GET -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678 http://serverAddress/data`
 
 Read one record:
 
-$ curl -X GET -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678 http://serverAddress/data/1
+`$ curl -X GET -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678 http://serverAddress/data/1`
 
 Delete:
 
-$ curl -X DELETE -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678 http://serverAddress/data/1
+`$ curl -X DELETE -d macAddress=AA:BB:CC:DD:EE:FF -d sessionKey=12345678 http://serverAddress/data/1`
